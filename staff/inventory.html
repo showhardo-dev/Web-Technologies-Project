@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shelter Inventory Management</title>
+</head>
+
+<body bgcolor="#F0F7F4">
+<center>
+<table width="85%" cellpadding="15" bgcolor="white" border="1">
+
+    <tr>
+        <td align="center" bgcolor="#245B4A">
+            <h1><font color="white">Shelter Inventory Management</font></h1>
+            <a href="dashboard.html"><font color="white">Staff Dashboard</font></a>
+            &nbsp; | &nbsp;
+            <a href="../commonui/index.html"><font color="white">Home</font></a>
+        </td>
+    </tr>
+
+    <tr>
+        <td align="center">
+            <h2>Inventory Item Details</h2>
+            <p>Enter the details of shelter supplies.</p>
+
+            <form action="#" method="post">
+                <table cellpadding="10" border="1">
+                    <tr>
+                        <td>Item ID:</td>
+                        <td><input type="text" name="item_id" required></td>
+                    </tr>
+
+                    <tr>
+                        <td>Item Name:</td>
+                        <td><input type="text" name="item_name" required></td>
+                    </tr>
+
+                    <tr>
+                        <td>Item Category:</td>
+                        <td>
+                            <select name="item_category">
+                                <option>Animal Food</option>
+                                <option>Medicine</option>
+                                <option>Cleaning Supplies</option>
+                                <option>Bedding</option>
+                                <option>Other</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Quantity:</td>
+                        <td><input type="number" name="quantity" min="0" required></td>
+                    </tr>
+
+                    <tr>
+                        <td>Storage Location:</td>
+                        <td><input type="text" name="storage_location"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Additional Notes:</td>
+                        <td>
+                            <textarea name="notes" rows="4" cols="25"></textarea>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2" align="center">
+                            <input type="submit" value="Submit Item">
+                            <input type="reset" value="Clear">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+
+            <p><a href="dashboard.html">Back to Dashboard</a></p>
+        </td>
+    </tr>
+
+    <tr>
+        <td align="center" bgcolor="#245B4A">
+            <font color="white">Animal Shelter Management System</font>
+        </td>
+    </tr>
+
+</table>
+</center>
+</body>
+</html>
