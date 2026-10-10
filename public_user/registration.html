@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Public User Registration</title>
+</head>
+
+<body>
+
+<center>
+
+    <br>
+
+    <h1>Animal Shelter Management System</h1>
+    <h2>Public User Registration</h2>
+
+    <hr width="70%">
+
+    <br>
+
+    <table border="1" width="55%" cellpadding="15">
+
+        <tr>
+            <td>
+
+                <form action="dashboard.html">
+
+                    <fieldset>
+
+                        <legend><b>Account Information</b></legend>
+
+                        <table width="100%" cellpadding="8">
+
+                            <tr>
+                                <td width="40%">
+                                    <b>Full Name:</b>
+                                </td>
+
+                                <td>
+                                    <input type="text"
+                                           name="full_name"
+                                           size="30"
+                                           required>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <b>Email:</b>
+                                </td>
+
+                                <td>
+                                    <input type="email"
+                                           name="email"
+                                           size="30"
+                                           required>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <b>Password:</b>
+                                </td>
+
+                                <td>
+                                    <input type="password"
+                                           name="password"
+                                           size="30"
+                                           required>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <b>Phone Number:</b>
+                                </td>
+
+                                <td>
+                                    <input type="tel"
+                                           name="phone"
+                                           size="30"
+                                           required>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <b>Address:</b>
+                                </td>
+
+                                <td>
+                                    <textarea name="address"
+                                              rows="3"
+                                              cols="30"
+                                              required></textarea>
+                                </td>
+                            </tr>
+
+                        </table>
+
+                    </fieldset>
+
+                    <br>
+
+                    <fieldset>
+
+                        <legend><b>Public User Information</b></legend>
+
+                        <table width="100%" cellpadding="8">
+
+                            <tr>
+                                <td width="40%">
+                                    <b>User Role:</b>
+                                </td>
+
+                                <td>
+                                    <input type="radio"
+                                           name="user_role"
+                                           value="Donor"
+                                           required>
+                                    Donor
+
+                                    &nbsp;&nbsp;
+
+                                    <input type="radio"
+                                           name="user_role"
+                                           value="Adopter">
+                                    Adopter
+
+                                    &nbsp;&nbsp;
+
+                                    <input type="radio"
+                                           name="user_role"
+                                           value="Both">
+                                    Both
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <b>Preferred Animal:</b>
+                                </td>
+
+                                <td>
+                                    <select name="preferred_animal" required>
+
+                                        <option value="">
+                                            Select Animal
+                                        </option>
+
+                                        <option value="Dog">
+                                            Dog
+                                        </option>
+
+                                        <option value="Cat">
+                                            Cat
+                                        </option>
+
+                                        <option value="Bird">
+                                            Bird
+                                        </option>
+
+                                        <option value="Other">
+                                            Other
+                                        </option>
+
+                                    </select>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <b>Previous Pet Experience:</b>
+                                </td>
+
+                                <td>
+                                    <input type="radio"
+                                           name="pet_experience"
+                                           value="Yes"
+                                           required>
+                                    Yes
+
+                                    &nbsp;&nbsp;
+
+                                    <input type="radio"
+                                           name="pet_experience"
+                                           value="No">
+                                    No
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <b>Housing Type:</b>
+                                </td>
+
+                                <td>
+                                    <select name="housing_type" required>
+
+                                        <option value="">
+                                            Select Housing Type
+                                        </option>
+
+                                        <option value="House">
+                                            House
+                                        </option>
+
+                                        <option value="Apartment">
+                                            Apartment
+                                        </option>
+
+                                        <option value="Other">
+                                            Other
+                                        </option>
+
+                                    </select>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <b>Donation Interest:</b>
+                                </td>
+
+                                <td>
+                                    <input type="checkbox"
+                                           name="donation_interest">
+                                    Interested in supporting the shelter
+                                </td>
+                            </tr>
+
+                        </table>
+
+                    </fieldset>
+
+                    <br>
+
+                    <center>
+
+                        <input type="submit"
+                               value="Register">
+
+                        &nbsp;&nbsp;
+
+                        <input type="reset"
+                               value="Reset">
+
+                    </center>
+
+                </form>
+                
+
+            </td>
+        </tr>
+
+    </table>
+
+    <br>
+
+    <a href="../commonui/index.html">Home</a>
+
+    &nbsp; | &nbsp;
+
+    <a href="../commonui/login.html">Login</a>
+
+    <br><br>
+
+    <hr width="70%">
+
+</center>
+
+</body>
+</html>
