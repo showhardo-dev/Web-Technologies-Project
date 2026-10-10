@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Users</title>
+</head>
+<body>
+
+    <h2 align="center">Animal Shelter Management System</h2>
+    <h3 align="center">Admin - Manage Users</h3>
+
+    <a href="manage_user.html">Manage Users</a> |
+    <a href="animal_records.html">Manage Animals</a> |
+    <a href="view_reports.html">View Reports</a>
+
+    <hr>
+
+    <h3 align="center">User Information</h3>
+
+    <table border="2" width="100%">
+        <tr>
+            <th>User ID</th>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>User Type</th>
+            <th>Address</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+
+        <tr align="center">
+            <td>101</td>
+            <td>Rahim Ahmed</td>
+            <td>rahim@gmail.com</td>
+            <td>01711111111</td>
+            <td>Staff</td>
+            <td>Dhaka</td>
+            <td>Active</td>
+            <td><button type="button">Delete</button></td>
+        </tr>
+
+        <tr align="center">
+            <td>102</td>
+            <td>Karim Hasan</td>
+            <td>karim@gmail.com</td>
+            <td>01822222222</td>
+            <td>Volunteer</td>
+            <td>Uttara, Dhaka</td>
+            <td>Active</td>
+            <td><button type="button">Delete</button></td>
+        </tr>
+
+        <tr align="center">
+            <td>103</td>
+            <td>Nusrat Jahan</td>
+            <td>nusrat@gmail.com</td>
+            <td>01933333333</td>
+            <td>Public User</td>
+            <td>Mirpur, Dhaka</td>
+            <td>Active</td>
+            <td><button type="button">Delete</button></td>
+        </tr>
+
+    </table>
+
+ 
+<h3 align="center">Add New User</h3>
+
+<form>
+    <fieldset>
+        <legend align="center">User Registration Information</legend>
+
+        <table>
+
+            <tr>
+                <td><label>Full Name:</label></td>
+                <td><input type="text" name="name"></td>
+            </tr>
+
+            <tr>
+                <td><label>Email:</label></td>
+                <td><input type="email" name="email"></td>
+            </tr>
+
+            <tr>
+                <td><label>Phone:</label></td>
+                <td><input type="tel" name="phone"></td>
+            </tr>
+
+            <tr>
+                <td><label>Gender:</label></td>
+                <td>
+                    <input type="radio" name="gender" value="Male"> Male
+                    <input type="radio" name="gender" value="Female"> Female
+                    <input type="radio" name="gender" value="Other"> Other
+                </td>
+            </tr>
+
+            <tr>
+                <td><label>Address:</label></td>
+                <td>
+                    <textarea name="address" rows="3" cols="25"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label>User Type:</label></td>
+                <td>
+                    <select name="user_type">
+                        <option value="Admin">Admin</option>
+                        <option value="Staff">Staff / Shelter Manager</option>
+                        <option value="Volunteer">Volunteer / Vet / Rescuer</option>
+                        <option value="Public">Public User</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label>Password:</label></td>
+                <td><input type="password" name="password"></td>
+            </tr>
+
+            <tr>
+                <td><label>Confirm Password:</label></td>
+                <td><input type="password" name="confirm_password"></td>
+            </tr>
+
+            <tr>
+                <td><label>Status:</label></td>
+                <td>
+                    <select name="status">
+                        <option value="Active">Active</option>
+                        <option value="Inactive">Inactive</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Add User">
+                    <input type="reset" value="Clear">
+                </td>
+            </tr>
+
+        </table>
+
+    </fieldset>
+</form>
+
+
+    <br>
+    <a href="">Back to Home</a>
+
+</body>
+</html>

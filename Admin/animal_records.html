@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Animals</title>
+</head>
+<body>
+
+    <h2 align="center">Animal Shelter Management System</h2>
+    <h3 align="center">Admin - Manage Animal Records</h3>
+
+    <a href="manage_user.html">Manage Users</a> |
+    <a href="animal_records.html">Manage Animals</a> |
+    <a href="view_reports.html">View Reports</a>
+
+    <hr>
+
+    <h3 align="center">Animal Information</h3>
+
+    <table border="2" width="100%">
+        <tr align="center">
+            <th>Animal ID</th>
+            <th>Name</th>
+            <th>Species</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Health Status</th>
+            <th>Adoption Status</th>
+            <th>Action</th>
+        </tr>
+
+        <tr align="center">
+            <td>201</td>
+            <td>Tommy</td>
+            <td>Dog</td>
+            <td>2 Years</td>
+            <td>Male</td>
+            <td>Healthy</td>
+            <td>Available</td>
+            <td><button type="button">Delete</button></td>
+        </tr>
+
+        <tr align="center">
+            <td>202</td>
+            <td>Mimi</td>
+            <td>Cat</td>
+            <td>1 Year</td>
+            <td>Female</td>
+            <td>Under Treatment</td>
+            <td>Not Available</td>
+            <td><button type="button">Delete</button></td>
+        </tr>
+
+        <tr align="center">
+            <td>203</td>
+            <td>Rocky</td>
+            <td>Dog</td>
+            <td>3 Years</td>
+            <td>Male</td>
+            <td>Healthy</td>
+            <td>Adopted</td>
+            <td><button type="button">Delete</button></td>
+        </tr>
+
+    </table>
+
+    
+<h3 align="center">Add New Animal</h3>
+
+<form>
+    <fieldset>
+        <legend align="center">Animal Information</legend>
+
+        <table>
+
+            <tr>
+                <td><label>Animal ID:</label></td>
+                <td><input type="text" name="animal_id"></td>
+            </tr>
+
+            <tr>
+                <td><label>Animal Name:</label></td>
+                <td><input type="text" name="animal_name"></td>
+            </tr>
+
+            <tr>
+                <td><label>Animal Type:</label></td>
+                <td>
+                    <select name="animal_type">
+                        <option value="Dog">Dog</option>
+                        <option value="Cat">Cat</option>
+                        <option value="Bird">Bird</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label>Age:</label></td>
+                <td><input type="number" name="age"></td>
+            </tr>
+
+            <tr>
+                <td><label>Gender:</label></td>
+                <td>
+                    <input type="radio" name="gender" value="Male"> Male
+                    <input type="radio" name="gender" value="Female"> Female
+                </td>
+            </tr>
+
+            <tr>
+                <td><label>Rescue Date:</label></td>
+                <td><input type="date" name="rescue_date"></td>
+            </tr>
+
+            <tr>
+                <td><label>Health Condition:</label></td>
+                <td>
+                    <select name="health_condition">
+                        <option value="Healthy">Healthy</option>
+                        <option value="Under Treatment">Under Treatment</option>
+                        <option value="Recovering">Recovering</option>
+                        <option value="Critical">Critical</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label>Animal Description:</label></td>
+                <td>
+                    <textarea name="description" rows="3" cols="25"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td><label>Adoption Status:</label></td>
+                <td>
+                    <select name="adoption_status">
+                        <option value="Available">Available</option>
+                        <option value="Not Available">Not Available</option>
+                        <option value="Adopted">Adopted</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Add Animal">
+                    <input type="reset" value="Clear">
+                </td>
+            </tr>
+
+        </table>
+    </fieldset>
+</form>
+
+    <br>
+    <a href="">Back to Home</a>
+
+</body>
+</html>
