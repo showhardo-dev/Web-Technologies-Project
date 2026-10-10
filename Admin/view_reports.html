@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Reports</title>
+</head>
+<body>
+
+    <h2 align="center">Animal Shelter Management System</h2>
+    <h3 align="center">Admin - View Reports</h3>
+
+    <a href="manage_user.html">Manage Users</a> |
+    <a href="animal_records.html">Manage Animals</a> |
+    <a href="view_reports.html">View Reports</a>
+
+    <hr>
+
+    <h3 align="center">Animal Shelter Reports</h3>
+
+    <table border="2" width="100%">
+        <tr align="center">
+            <th>Report ID</th>
+            <th>Report Name</th>
+            <th>Total</th>
+            <th>Description</th>
+        </tr>
+
+        <tr align="center">
+            <td>R001</td>
+            <td>Total Animals</td>
+            <td>50</td>
+            <td>Total animals registered in the shelter</td>
+        </tr>
+
+        <tr align="center">
+            <td>R002</td>
+            <td>Available Animals</td>
+            <td>25</td>
+            <td>Animals available for adoption</td>
+        </tr>
+
+        <tr align="center">
+            <td>R003</td>
+            <td>Adopted Animals</td>
+            <td>20</td>
+            <td>Animals successfully adopted</td>
+        </tr>
+
+        <tr align="center">
+            <td>R004</td>
+            <td>Animals Under Treatment</td>
+            <td>5</td>
+            <td>Animals receiving medical care</td>
+        </tr>
+
+        <tr align="center">
+            <td>R005</td>
+            <td>Registered Users</td>
+            <td>30</td>
+            <td>Total registered system users</td>
+        </tr>
+
+        <tr align="center">
+            <td>R006</td>
+            <td>Total Donations</td>
+            <td>15000 BDT</td>
+            <td>Total donations received by the shelter</td>
+        </tr>
+    </table>
+
+    <br>
+
+    <h3 align="center">Report Summary</h3>
+
+    <table border="2" width="100%">
+        <tr align="center">
+            <th>Category</th>
+            <th>Information</th>
+        </tr>
+
+        <tr align="center">
+            <td>Animal Management</td>
+            <td>View total, available, and adopted animals</td>
+        </tr>
+
+        <tr align="center">
+            <td>User Management</td>
+            <td>View the total number of registered users</td>
+        </tr>
+
+        <tr align="center">
+            <td>Donation Management</td>
+            <td>View the total amount of donations</td>
+        </tr>
+    </table>
+
+    <br>
+
+    <div align="center">
+        <input type="button" value="Print Report"
+               onclick="window.print()">
+    </div>
+
+    <br>
+
+    <a href="">Back to Home</a>
+
+</body>
+</html>

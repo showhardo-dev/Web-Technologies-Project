@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Donation</title>
+</head>
+
+<body>
+
+<center>
+
+    <br>
+
+    <h1>Animal Shelter Management System</h1>
+    <h2>Make a Donation</h2>
+
+    <hr width="75%">
+
+    <p>
+        <a href="dashboard.html">Dashboard</a>
+        &nbsp; | &nbsp;
+        <a href="available_animals.html">Available Animals</a>
+        &nbsp; | &nbsp;
+        <a href="my_requests.html">My Adoption Requests</a>
+        &nbsp; | &nbsp;
+        <a href="donation.html">Donation</a>
+    </p>
+
+    <hr width="75%">
+
+    <br>
+
+    <table border="1" width="60%" cellpadding="15">
+
+        <tr>
+            <td>
+
+                <form>
+
+                    <fieldset>
+
+                        <legend><b>Donor Information</b></legend>
+
+                        <table width="100%" cellpadding="8">
+
+                            <tr>
+                                <td width="40%">
+                                    <b>Full Name:</b>
+                                </td>
+
+                                <td>
+                                    <input type="text"
+                                           name="full_name"
+                                           size="30"
+                                           required>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <b>Email:</b>
+                                </td>
+
+                                <td>
+                                    <input type="email"
+                                           name="email"
+                                           size="30"
+                                           required>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <b>Phone Number:</b>
+                                </td>
+
+                                <td>
+                                    <input type="tel"
+                                           name="phone"
+                                           size="30"
+                                           required>
+                                </td>
+                            </tr>
+
+                        </table>
+
+                    </fieldset>
+
+                    <br>
+
+                    <fieldset>
+
+                        <legend><b>Donation Information</b></legend>
+
+                        <table width="100%" cellpadding="8">
+
+                            <tr>
+                                <td width="40%">
+                                    <b>Donation Type:</b>
+                                </td>
+
+                                <td>
+                                    <select name="donation_type" required>
+
+                                        <option value="">
+                                            Select Donation Type
+                                        </option>
+
+                                        <option value="Money">
+                                            Money
+                                        </option>
+
+                                        <option value="Food">
+                                            Food
+                                        </option>
+
+                                        <option value="Medicine">
+                                            Medicine
+                                        </option>
+
+                                        <option value="Animal Supplies">
+                                            Animal Supplies
+                                        </option>
+
+                                    </select>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <b>Amount / Quantity:</b>
+                                </td>
+
+                                <td>
+                                    <input type="text"
+                                           name="amount_quantity"
+                                           size="30"
+                                           required>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <b>Payment Method:</b>
+                                </td>
+
+                                <td>
+                                    <input type="radio"
+                                           name="payment_method"
+                                           value="Cash">
+                                    Cash
+
+                                    &nbsp;&nbsp;
+
+                                    <input type="radio"
+                                           name="payment_method"
+                                           value="bKash">
+                                    bKash
+
+                                    &nbsp;&nbsp;
+
+                                    <input type="radio"
+                                           name="payment_method"
+                                           value="Bank">
+                                    Bank
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <b>Description:</b>
+                                </td>
+
+                                <td>
+                                    <textarea name="description"
+                                              rows="4"
+                                              cols="30"></textarea>
+                                </td>
+                            </tr>
+
+                        </table>
+
+                    </fieldset>
+
+                    <br>
+
+                    <center>
+
+                        <input type="submit"
+                               value="Submit Donation">
+
+                        &nbsp;&nbsp;
+
+                        <input type="reset"
+                               value="Reset">
+
+                    </center>
+
+                </form>
+
+            </td>
+        </tr>
+
+    </table>
+
+    <br><br>
+
+    <hr width="75%">
+
+    <p>Animal Shelter Management System</p>
+
+</center>
+
+</body>
+
+</html>
