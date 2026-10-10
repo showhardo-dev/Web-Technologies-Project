@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Adoption Request</title>
+</head>
+
+<body>
+
+<center>
+
+    <br>
+
+    <h1>Animal Shelter Management System</h1>
+    <h2>Adoption Request</h2>
+
+    <hr width="75%">
+
+    <p>
+        <a href="dashboard.html">Dashboard</a>
+        &nbsp; | &nbsp;
+        <a href="available_animals.html">Available Animals</a>
+        &nbsp; | &nbsp;
+        <a href="my_requests.html">My Adoption Requests</a>
+        &nbsp; | &nbsp;
+        <a href="donation.html">Donation</a>
+        &nbsp; | &nbsp;
+        <a href="../commonui/index.html">Home</a>
+        &nbsp; | &nbsp;
+        <a href="../commonui/login.html">Logout</a>
+    </p>
+
+    <hr width="75%">
+
+    <br>
+
+    <table border="1" width="60%" cellpadding="15">
+
+        <tr>
+            <td>
+
+                <form action="my_requests.html">
+
+                    <fieldset>
+
+                        <legend><b>Animal Information</b></legend>
+
+                        <table width="100%" cellpadding="8">
+
+                            <tr>
+                                <td width="40%">
+                                    <b>Animal ID:</b>
+                                </td>
+
+                                <td>
+                                    <input type="text"
+                                           name="animal_id"
+                                           size="30"
+                                           required>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <b>Animal Name:</b>
+                                </td>
+
+                                <td>
+                                    <input type="text"
+                                           name="animal_name"
+                                           size="30"
+                                           required>
+                                </td>
+                            </tr>
+
+                        </table>
+
+                    </fieldset>
+
+                    <br>
+
+                    <fieldset>
+
+                        <legend><b>Applicant Information</b></legend>
+
+                        <table width="100%" cellpadding="8">
+
+                            <tr>
+                                <td width="40%">
+                                    <b>Full Name:</b>
+                                </td>
+
+                                <td>
+                                    <input type="text"
+                                           name="full_name"
+                                           size="30"
+                                           required>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <b>Email:</b>
+                                </td>
+
+                                <td>
+                                    <input type="email"
+                                           name="email"
+                                           size="30"
+                                           required>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <b>Phone Number:</b>
+                                </td>
+
+                                <td>
+                                    <input type="tel"
+                                           name="phone"
+                                           size="30"
+                                           required>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <b>Address:</b>
+                                </td>
+
+                                <td>
+                                    <textarea name="address"
+                                              rows="3"
+                                              cols="30"
+                                              required></textarea>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <b>Housing Type:</b>
+                                </td>
+
+                                <td>
+                                    <select name="housing_type" required>
+
+                                        <option value="">
+                                            Select Housing Type
+                                        </option>
+
+                                        <option value="House">
+                                            House
+                                        </option>
+
+                                        <option value="Apartment">
+                                            Apartment
+                                        </option>
+
+                                        <option value="Other">
+                                            Other
+                                        </option>
+
+                                    </select>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <b>Previous Pet Experience:</b>
+                                </td>
+
+                                <td>
+                                    <input type="radio"
+                                           name="pet_experience"
+                                           value="Yes"
+                                           required>
+                                    Yes
+
+                                    &nbsp;&nbsp;
+
+                                    <input type="radio"
+                                           name="pet_experience"
+                                           value="No">
+                                    No
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <b>Reason for Adoption:</b>
+                                </td>
+
+                                <td>
+                                    <textarea name="adoption_reason"
+                                              rows="4"
+                                              cols="30"
+                                              required></textarea>
+                                </td>
+                            </tr>
+
+                        </table>
+
+                    </fieldset>
+
+                    <br>
+
+                    <center>
+
+                        <input type="submit"
+                               value="Submit Adoption Request">
+
+                        &nbsp;&nbsp;
+
+                        <input type="reset"
+                               value="Reset">
+
+                    </center>
+
+                </form>
+
+            </td>
+        </tr>
+
+    </table>
+
+    <br><br>
+
+    <a href="available_animals.html">Back to Available Animals</a>
+
+    <br><br>
+
+    <hr width="75%">
+
+    <p>Animal Shelter Management System</p>
+
+</center>
+
+</body>
+
+</html>
