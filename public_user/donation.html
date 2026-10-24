@@ -3,215 +3,218 @@
 
 <head>
     <title>Donation</title>
+    <link rel="stylesheet" href="css/public_user.css">
 </head>
 
 <body>
 
-<center>
+    <div class="page-container">
 
-    <br>
+        <header class="page-header">
+            <h1>Animal Shelter Management System</h1>
+            <h2>Make a Donation</h2>
+        </header>
 
-    <h1>Animal Shelter Management System</h1>
-    <h2>Make a Donation</h2>
+        <nav class="main-nav">
+            <a href="available_animals.html">Available Animals</a>
+            <a href="adoption_request.html">Adoption Request</a>
+            <a href="donation.html" class="active">Donation</a>
+        </nav>
 
-    <hr width="75%">
+        <main class="registration-container">
 
-    <p>
-        <a href="available_animals.html">Available Animals</a>
-        &nbsp; | &nbsp;
-        <a href="donation.html">Donation</a>
-    </p>
+            <form id="donation-form">
 
-    <hr width="75%">
+                <fieldset class="form-section">
 
-    <br>
+                    <legend>Donor Information</legend>
 
-    <table border="1" width="60%" cellpadding="15">
+                    <div class="form-group">
 
-        <tr>
-            <td>
+                        <label for="donor_name">
+                            Full Name:
+                        </label>
 
-                <form>
+                        <input
+                            type="text"
+                            id="donor_name"
+                            name="full_name"
+                            required>
 
-                    <fieldset>
+                    </div>
 
-                        <legend><b>Donor Information</b></legend>
 
-                        <table width="100%" cellpadding="8">
+                    <div class="form-group">
 
-                            <tr>
-                                <td width="40%">
-                                    <b>Full Name:</b>
-                                </td>
+                        <label for="donor_email">
+                            Email:
+                        </label>
 
-                                <td>
-                                    <input type="text"
-                                           name="full_name"
-                                           size="30"
-                                           required>
-                                </td>
-                            </tr>
+                        <input
+                            type="email"
+                            id="donor_email"
+                            name="email"
+                            required>
 
-                            <tr>
-                                <td>
-                                    <b>Email:</b>
-                                </td>
+                    </div>
 
-                                <td>
-                                    <input type="email"
-                                           name="email"
-                                           size="30"
-                                           required>
-                                </td>
-                            </tr>
 
-                            <tr>
-                                <td>
-                                    <b>Phone Number:</b>
-                                </td>
+                    <div class="form-group">
 
-                                <td>
-                                    <input type="tel"
-                                           name="phone"
-                                           size="30"
-                                           required>
-                                </td>
-                            </tr>
+                        <label for="donor_phone">
+                            Phone Number:
+                        </label>
 
-                        </table>
+                        <input
+                            type="tel"
+                            id="donor_phone"
+                            name="phone"
+                            required>
 
-                    </fieldset>
+                    </div>
 
-                    <br>
+                </fieldset>
 
-                    <fieldset>
 
-                        <legend><b>Donation Information</b></legend>
+                <fieldset class="form-section">
 
-                        <table width="100%" cellpadding="8">
+                    <legend>Donation Information</legend>
 
-                            <tr>
-                                <td width="40%">
-                                    <b>Donation Type:</b>
-                                </td>
+                    <div class="form-group">
 
-                                <td>
-                                    <select name="donation_type" required>
+                        <label for="donation_type">
+                            Donation Type:
+                        </label>
 
-                                        <option value="">
-                                            Select Donation Type
-                                        </option>
+                        <select
+                            id="donation_type"
+                            name="donation_type"
+                            required>
 
-                                        <option value="Money">
-                                            Money
-                                        </option>
+                            <option value="">
+                                Select Donation Type
+                            </option>
 
-                                        <option value="Food">
-                                            Food
-                                        </option>
+                            <option value="Money">
+                                Money
+                            </option>
 
-                                        <option value="Medicine">
-                                            Medicine
-                                        </option>
+                            <option value="Food">
+                                Food
+                            </option>
 
-                                        <option value="Animal Supplies">
-                                            Animal Supplies
-                                        </option>
+                            <option value="Medicine">
+                                Medicine
+                            </option>
 
-                                    </select>
-                                </td>
-                            </tr>
+                            <option value="Animal Supplies">
+                                Animal Supplies
+                            </option>
 
-                            <tr>
-                                <td>
-                                    <b>Amount / Quantity:</b>
-                                </td>
+                        </select>
 
-                                <td>
-                                    <input type="text"
-                                           name="amount_quantity"
-                                           size="30"
-                                           required>
-                                </td>
-                            </tr>
+                    </div>
 
-                            <tr>
-                                <td>
-                                    <b>Payment Method:</b>
-                                </td>
 
-                                <td>
-                                    <input type="radio"
-                                           name="payment_method"
-                                           value="Cash">
-                                    Cash
+                    <div class="form-group">
 
-                                    &nbsp;&nbsp;
+                        <label for="amount_quantity">
+                            Amount / Quantity:
+                        </label>
 
-                                    <input type="radio"
-                                           name="payment_method"
-                                           value="bKash">
-                                    bKash
+                        <input
+                            type="text"
+                            id="amount_quantity"
+                            name="amount_quantity"
+                            required>
 
-                                    &nbsp;&nbsp;
+                    </div>
 
-                                    <input type="radio"
-                                           name="payment_method"
-                                           value="Bank">
-                                    Bank
-                                </td>
-                            </tr>
 
-                            <tr>
-                                <td>
-                                    <b>Description:</b>
-                                </td>
+                    <div class="form-group">
 
-                                <td>
-                                    <textarea name="description"
-                                              rows="4"
-                                              cols="30"></textarea>
-                                </td>
-                            </tr>
+                        <label>
+                            Payment Method:
+                        </label>
 
-                        </table>
+                        <div class="option-group">
 
-                    </fieldset>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="payment_method"
+                                    value="Cash"
+                                    required>
+                                Cash
+                            </label>
 
-                    <br>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="payment_method"
+                                    value="bKash">
+                                bKash
+                            </label>
 
-                    <center>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="payment_method"
+                                    value="Bank">
+                                Bank
+                            </label>
 
-                        <input type="submit"
-                               value="Submit Donation">
+                        </div>
 
-                        &nbsp;&nbsp;
+                    </div>
 
-                        <input type="reset"
-                               value="Reset">
 
-                    </center>
+                    <div class="form-group">
 
-                </form>
+                        <label for="description">
+                            Description:
+                        </label>
 
-            </td>
-        </tr>
+                        <textarea
+                            id="description"
+                            name="description"
+                            rows="4"></textarea>
 
-    </table>
+                    </div>
 
-    <br><br>
+                </fieldset>
 
-    <a href="available_animals.html">
-        Back to Available Animals
-    </a>
 
-    <br><br>
+                <div class="form-buttons">
 
-    <hr width="75%">
+                    <input
+                        type="submit"
+                        value="Submit Donation"
+                        class="btn primary-btn">
 
-    <p>Animal Shelter Management System</p>
+                    <input
+                        type="reset"
+                        value="Reset"
+                        class="btn secondary-btn">
 
-</center>
+                </div>
+
+            </form>
+
+            <div class="back-link">
+                <a href="available_animals.html">
+                    Back to Available Animals
+                </a>
+            </div>
+
+        </main>
+
+
+        <footer class="page-footer">
+            <p>Animal Shelter Management System</p>
+        </footer>
+
+    </div>
 
 </body>
 

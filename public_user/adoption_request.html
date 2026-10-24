@@ -3,232 +3,206 @@
 
 <head>
     <title>Adoption Request</title>
+    <link rel="stylesheet" href="css/public_user.css">
 </head>
 
 <body>
 
-<center>
+    <div class="page-container">
 
-    <br>
+        <header class="page-header">
+            <h1>Animal Shelter Management System</h1>
+            <h2>Adoption Request</h2>
+        </header>
 
-    <h1>Animal Shelter Management System</h1>
-    <h2>Adoption Request</h2>
+        <nav class="main-nav">
+            <a href="available_animals.html">Available Animals</a>
+            <a href="adoption_request.html" class="active">Adoption Request</a>
+            <a href="donation.html">Donation</a>
+        </nav>
 
-    <hr width="75%">
+        <main class="registration-container">
 
-    <p>
-        <a href="available_animals.html">Available Animals</a>
-        &nbsp; | &nbsp;
-        <a href="donation.html">Donation</a>
-    </p>
+            <form id="adoption-form">
 
-    <hr width="75%">
+                <fieldset class="form-section">
 
-    <br>
+                    <legend>Animal Information</legend>
 
-    <table border="1" width="60%" cellpadding="15">
+                    <div class="form-group">
+                        <label for="animal_id">Animal ID:</label>
 
-        <tr>
-            <td>
+                        <input
+                            type="text"
+                            id="animal_id"
+                            name="animal_id"
+                            required>
+                    </div>
 
-                <form>
+                    <div class="form-group">
+                        <label for="animal_name">Animal Name:</label>
 
-                    <fieldset>
+                        <input
+                            type="text"
+                            id="animal_name"
+                            name="animal_name"
+                            required>
+                    </div>
 
-                        <legend><b>Animal Information</b></legend>
+                </fieldset>
 
-                        <table width="100%" cellpadding="8">
 
-                            <tr>
-                                <td width="40%">
-                                    <b>Animal ID:</b>
-                                </td>
+                <fieldset class="form-section">
 
-                                <td>
-                                    <input type="text"
-                                           name="animal_id"
-                                           size="30"
-                                           required>
-                                </td>
-                            </tr>
+                    <legend>Applicant Information</legend>
 
-                            <tr>
-                                <td>
-                                    <b>Animal Name:</b>
-                                </td>
+                    <div class="form-group">
+                        <label for="adopter_name">Full Name:</label>
 
-                                <td>
-                                    <input type="text"
-                                           name="animal_name"
-                                           size="30"
-                                           required>
-                                </td>
-                            </tr>
+                        <input
+                            type="text"
+                            id="adopter_name"
+                            name="full_name"
+                            required>
+                    </div>
 
-                        </table>
+                    <div class="form-group">
+                        <label for="adopter_email">Email:</label>
 
-                    </fieldset>
+                        <input
+                            type="email"
+                            id="adopter_email"
+                            name="email"
+                            required>
+                    </div>
 
-                    <br>
+                    <div class="form-group">
+                        <label for="adopter_phone">Phone Number:</label>
 
-                    <fieldset>
+                        <input
+                            type="tel"
+                            id="adopter_phone"
+                            name="phone"
+                            required>
+                    </div>
 
-                        <legend><b>Applicant Information</b></legend>
+                    <div class="form-group">
+                        <label for="adopter_address">Address:</label>
 
-                        <table width="100%" cellpadding="8">
+                        <textarea
+                            id="adopter_address"
+                            name="address"
+                            rows="3"
+                            required></textarea>
+                    </div>
 
-                            <tr>
-                                <td width="40%">
-                                    <b>Full Name:</b>
-                                </td>
+                    <div class="form-group">
 
-                                <td>
-                                    <input type="text"
-                                           name="full_name"
-                                           size="30"
-                                           required>
-                                </td>
-                            </tr>
+                        <label for="adoption_housing">
+                            Housing Type:
+                        </label>
 
-                            <tr>
-                                <td>
-                                    <b>Email:</b>
-                                </td>
+                        <select
+                            id="adoption_housing"
+                            name="housing_type"
+                            required>
 
-                                <td>
-                                    <input type="email"
-                                           name="email"
-                                           size="30"
-                                           required>
-                                </td>
-                            </tr>
+                            <option value="">
+                                Select Housing Type
+                            </option>
 
-                            <tr>
-                                <td>
-                                    <b>Phone Number:</b>
-                                </td>
+                            <option value="House">
+                                House
+                            </option>
 
-                                <td>
-                                    <input type="tel"
-                                           name="phone"
-                                           size="30"
-                                           required>
-                                </td>
-                            </tr>
+                            <option value="Apartment">
+                                Apartment
+                            </option>
 
-                            <tr>
-                                <td>
-                                    <b>Address:</b>
-                                </td>
+                            <option value="Other">
+                                Other
+                            </option>
 
-                                <td>
-                                    <textarea name="address"
-                                              rows="3"
-                                              cols="30"
-                                              required></textarea>
-                                </td>
-                            </tr>
+                        </select>
 
-                            <tr>
-                                <td>
-                                    <b>Housing Type:</b>
-                                </td>
+                    </div>
 
-                                <td>
-                                    <select name="housing_type" required>
 
-                                        <option value="">
-                                            Select Housing Type
-                                        </option>
+                    <div class="form-group">
 
-                                        <option value="House">
-                                            House
-                                        </option>
+                        <label>Previous Pet Experience:</label>
 
-                                        <option value="Apartment">
-                                            Apartment
-                                        </option>
+                        <div class="option-group">
 
-                                        <option value="Other">
-                                            Other
-                                        </option>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="pet_experience"
+                                    value="Yes"
+                                    required>
+                                Yes
+                            </label>
 
-                                    </select>
-                                </td>
-                            </tr>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="pet_experience"
+                                    value="No">
+                                No
+                            </label>
 
-                            <tr>
-                                <td>
-                                    <b>Previous Pet Experience:</b>
-                                </td>
+                        </div>
 
-                                <td>
-                                    <input type="radio"
-                                           name="pet_experience"
-                                           value="Yes"
-                                           required>
-                                    Yes
+                    </div>
 
-                                    &nbsp;&nbsp;
 
-                                    <input type="radio"
-                                           name="pet_experience"
-                                           value="No">
-                                    No
-                                </td>
-                            </tr>
+                    <div class="form-group">
 
-                            <tr>
-                                <td>
-                                    <b>Reason for Adoption:</b>
-                                </td>
+                        <label for="adoption_reason">
+                            Reason for Adoption:
+                        </label>
 
-                                <td>
-                                    <textarea name="adoption_reason"
-                                              rows="4"
-                                              cols="30"
-                                              required></textarea>
-                                </td>
-                            </tr>
+                        <textarea
+                            id="adoption_reason"
+                            name="adoption_reason"
+                            rows="4"
+                            required></textarea>
 
-                        </table>
+                    </div>
 
-                    </fieldset>
+                </fieldset>
 
-                    <br>
 
-                    <center>
+                <div class="form-buttons">
 
-                        <input type="submit"
-                               value="Submit Adoption Request">
+                    <input
+                        type="submit"
+                        value="Submit Adoption Request"
+                        class="btn primary-btn">
 
-                        &nbsp;&nbsp;
+                    <input
+                        type="reset"
+                        value="Reset"
+                        class="btn secondary-btn">
 
-                        <input type="reset"
-                               value="Reset">
+                </div>
 
-                    </center>
+            </form>
 
-                </form>
+            <div class="back-link">
+                <a href="available_animals.html">
+                    Back to Available Animals
+                </a>
+            </div>
 
-            </td>
-        </tr>
+        </main>
 
-    </table>
 
-    <br><br>
+        <footer class="page-footer">
+            <p>Animal Shelter Management System</p>
+        </footer>
 
-    <a href="available_animals.html">
-        Back to Available Animals
-    </a>
-
-    <br><br>
-
-    <hr width="75%">
-
-    <p>Animal Shelter Management System</p>
-
-</center>
+    </div>
 
 </body>
 
