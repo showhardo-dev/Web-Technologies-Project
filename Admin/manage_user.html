@@ -2,91 +2,101 @@
 <html>
 <head>
     <title>Manage Users</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+    <div class="page-container">
+        <header class="page-header">
+            <div class="logo">
+                <img src="logo.png" alt="Animal Shelter Logo">
+            </div>
+            <div class="header-text">
+                <h1>Animal Shelter Management System</h1>
+                <p>Care • Protect • Give Them a Better Tomorrow</p>
+            </div>
+            <div class="paw-decoration">🐾</div>
+        </header>
  
-    <h2 align="center">Animal Shelter Management System</h2>
-    <h3 align="center">Admin - Manage Users</h3>
+        <nav class="main-nav">
+            <a href="manage_user.html" class="active">Manage Users</a>
+            <a href="animal_records.html">Animal Records</a>
+            <a href="view_reports.html">View Reports</a>
+        </nav>
  
-    <a href="manage_user.html">Manage Users</a> |
-    <a href="animal_records.html">Manage Animals</a> |
-    <a href="view_reports.html">View Reports</a>
+        <main class="content-container" id="admin-content">
+            <h2>Manage Users</h2>
  
-    <hr>
+            <section class="section-box">
+                <h3>Add / Edit User</h3>
+                <form>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="fullname">Full Name:</label>
+                            <input type="text" id="fullname" name="fullname">
+                        </div>
+                        <div class="form-group">
+                            <label for="usertype">User Type:</label>
+                            <select id="usertype" name="usertype">
+                                <option value="">Select User Type</option>
+                                <option>Admin</option>
+                                <option>Staff</option>
+                                <option>Volunteer</option>
+                                <option>Public User</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number:</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password">
+                        </div>
+                        <div class="form-group">
+                            <label for="status">Status:</label>
+                            <select id="status" name="status">
+                                <option>Active</option>
+                                <option>Inactive</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-buttons">
+                        <input type="submit" value="Save User" class="primary-btn">
+                        <input type="reset" value="Reset" class="secondary-btn">
+                    </div>
+                </form>
+            </section>
  
-    <h3 align="center">User Information</h3>
- 
-    <table border="1" width="100%">
-        <tr>
-            <th>User ID</th>
-            <th>Full Name</th>
-            <th>Email</th>
-            <th>Phone</th>
-            <th>User Type</th>
-            <th>Address</th>
-            <th>Status</th>
-            <th>Action</th>
-        </tr>
-    </table>
- 
-    <h3 align="center">Add New User</h3>
- 
-    <form>
-        <fieldset>
-            <legend>User Registration Information</legend>
- 
-            Full Name:
-            <input type="text" name="fullname">
-            <br><br>
- 
-            Email:
-            <input type="email" name="email">
-            <br><br>
- 
-            Phone:
-            <input type="tel" name="phone">
-            <br><br>
- 
-            Gender:
-            <input type="radio" name="gender" value="Male"> Male
-            <input type="radio" name="gender" value="Female"> Female
-            <input type="radio" name="gender" value="Other"> Other
-            <br><br>
- 
-            Address:
-            <textarea name="address" rows="3" cols="25"></textarea>
-            <br><br>
- 
-            User Type:
-            <select name="usertype">
-                <option>Admin</option>
-                <option>Staff</option>
-                <option>Volunteer</option>
-                <option>Public User</option>
-            </select>
-            <br><br>
- 
-            Password:
-            <input type="password" name="password">
-            <br><br>
- 
-            Confirm Password:
-            <input type="password" name="confirm_password">
-            <br><br>
- 
-            Status:
-            <select name="status">
-                <option>Active</option>
-                <option>Inactive</option>
-            </select>
-            <br><br>
- 
-            <input type="submit" value="Add User">
-            <input type="reset" value="Clear">
- 
-        </fieldset>
-    </form>
- 
+            <section class="section-box">
+                <h3>User List</h3>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>User ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>User Type</th>
+                                <th>Phone</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                         
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+        <footer class="page-footer">Animal Shelter Management System — Admin Panel</footer>
+    </div>
 </body>
 </html>
+ 
  
