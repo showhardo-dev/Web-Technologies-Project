@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animal Care Management</title>
+</head>
+
+<body bgcolor="#F0F7F4">
+<center>
+<table width="85%" cellpadding="15" bgcolor="white" border="1">
+
+    <tr>
+        <td align="center" bgcolor="#245B4A">
+            <h1><font color="white">Animal Care Management</font></h1>
+            <a href="dashboard.html"><font color="white">Staff Dashboard</font></a>
+            &nbsp; | &nbsp;
+            <a href="../commonui/index.html"><font color="white">Home</font></a>
+        </td>
+    </tr>
+
+    <tr>
+        <td align="center">
+            <h2>Animal Care Record</h2>
+            <p>Enter the details of the animal and its care.</p>
+
+            <form action="#" method="post">
+                <table cellpadding="10" border="1">
+                    <tr>
+                        <td>Animal ID:</td>
+                        <td><input type="text" name="animal_id" required></td>
+                    </tr>
+
+                    <tr>
+                        <td>Animal Name:</td>
+                        <td><input type="text" name="animal_name" required></td>
+                    </tr>
+
+                    <tr>
+                        <td>Animal Type:</td>
+                        <td>
+                            <select name="animal_type">
+                                <option>Dog</option>
+                                <option>Cat</option>
+                                <option>Bird</option>
+                                <option>Other</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Care Status:</td>
+                        <td>
+                            <select name="care_status">
+                                <option>Needs Care</option>
+                                <option>Under Care</option>
+                                <option>Stable</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Care Notes:</td>
+                        <td>
+                            <textarea name="care_notes" rows="4" cols="25"></textarea>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2" align="center">
+                            <input type="submit" value="Submit Record">
+                            <input type="reset" value="Clear">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+
+            <p><a href="dashboard.html">Back to Dashboard</a></p>
+        </td>
+    </tr>
+
+    <tr>
+        <td align="center" bgcolor="#245B4A">
+            <font color="white">Animal Shelter Management System</font>
+        </td>
+    </tr>
+
+</table>
+</center>
+</body>
+</html>

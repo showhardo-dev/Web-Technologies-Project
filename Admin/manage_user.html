@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manage Users</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="page-container">
+        <header class="page-header">
+            <div class="logo">
+                <img src="logo.png" alt="Animal Shelter Logo">
+            </div>
+            <div class="header-text">
+                <h1>Animal Shelter Management System</h1>
+                <p>Care • Protect • Give Them a Better Tomorrow</p>
+            </div>
+            <div class="paw-decoration">🐾</div>
+        </header>
+ 
+        <nav class="main-nav">
+            <a href="manage_user.html" class="active">Manage Users</a>
+            <a href="animal_records.html">Animal Records</a>
+            <a href="view_reports.html">View Reports</a>
+        </nav>
+ 
+        <main class="content-container" id="admin-content">
+            <h2>Manage Users</h2>
+ 
+            <section class="section-box">
+                <h3>Add / Edit User</h3>
+                <form>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="fullname">Full Name:</label>
+                            <input type="text" id="fullname" name="fullname">
+                        </div>
+                        <div class="form-group">
+                            <label for="usertype">User Type:</label>
+                            <select id="usertype" name="usertype">
+                                <option value="">Select User Type</option>
+                                <option>Admin</option>
+                                <option>Staff</option>
+                                <option>Volunteer</option>
+                                <option>Public User</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number:</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password">
+                        </div>
+                        <div class="form-group">
+                            <label for="status">Status:</label>
+                            <select id="status" name="status">
+                                <option>Active</option>
+                                <option>Inactive</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-buttons">
+                        <input type="submit" value="Save User" class="primary-btn">
+                        <input type="reset" value="Reset" class="secondary-btn">
+                    </div>
+                </form>
+            </section>
+ 
+            <section class="section-box">
+                <h3>User List</h3>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>User ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>User Type</th>
+                                <th>Phone</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                         
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+        <footer class="page-footer">Animal Shelter Management System — Admin Panel</footer>
+    </div>
+</body>
+</html>
+ 
+ 

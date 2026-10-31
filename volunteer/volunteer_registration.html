@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Volunteer Registration</title>
+    <link rel="stylesheet" href="css/volunteer_reg.css">
+</head>
+<body>
+
+    <h1 align="center">Volunteer Registration</h1>
+    <h3 align="center">Join Our Rescue and Animal Care Team</h3>
+
+    <center>
+        <a href="index.html">Go to Home</a>
+    </center>
+
+    <form>
+        <fieldset>
+            <legend align="center">Personal Information</legend>
+
+           <center>
+             <table>
+                <tr>
+                    <td><label for="fullname">Full Name:</label></td>
+                    <td><input type="text" id="fullname" name="fullname" required></td>
+                </tr>
+
+                <tr>
+                    <td><label >Date of Birth:</label></td>
+                    <td><input type="date" id="dob" name="dob"  required></td>
+                </tr>
+
+                <tr>
+                    <td><label>Gender:</label></td>
+                    <td>
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label>
+                        <input type="radio" id="other" name="gender" value="other">
+                        <label for="other">Other</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td><input type="email" id="email" name="email" required></td>
+                </tr>
+
+                <tr>
+                    <td><label for="phone">Phone Number:</label></td>
+                    <td><input type="tel" id="phone" name="phone" required></td>
+                </tr>
+
+                <tr>
+                    <td><label for="address">Address:</label></td>
+                    <td><textarea id="address" name="address" ></textarea></td>
+                </tr>
+            </table>
+           </center>
+
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend align="center">Volunteer Preferences</legend>
+           <center>
+             <table>
+                <tr>
+                    <td><label for="area">Area of Interest:</label></td>
+                    <td>
+                        <select id="area" name="area">
+                            <option>Rescue Operations</option>
+                            <option>Animal Care</option>
+                            <option>Event Support</option>
+                            <option>Fundraising</option>
+                            <option>Administration</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label>Days Available:</label></td>
+                    <td>
+                        <input type="checkbox" id="sat" name="days" value="sat">
+                        <label for="sat">Sat</label>
+                        <input type="checkbox" id="sun" name="days" value="sun">
+                        <label for="sun">Sun</label>
+                        <input type="checkbox" id="mon" name="days" value="mon">
+                        <label for="mon">Mon</label>
+                        <input type="checkbox" id="tue" name="days" value="tue">
+                        <label for="tue">Tue</label>
+                        <input type="checkbox" id="wed" name="days" value="wed">
+                        <label for="wed">Wed</label>
+                        <input type="checkbox" id="thu" name="days" value="thu">
+                        <label for="thu">Thu</label>
+                        <input type="checkbox" id="fri" name="days" value="fri">
+                        <label for="fri">Fri</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="shift">Preferred Time:</label></td>
+                    <td>
+                        <select id="shift" name="shift">
+                            <option>Morning</option>
+                            <option>Afternoon</option>
+                            <option>Evening</option>
+                            <option>Flexible</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="startdate">Available From:</label></td>
+                    <td><input type="date" id="startdate" name="startdate"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="experience">Experience / Skills:</label></td>
+                    <td><textarea id="experience" name="experience" rows="4" cols="30"></textarea></td>
+                </tr>
+            </table>
+           </center>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend align="center">Emergency Contact</legend>
+            <center>
+                <table>
+                <tr>
+                    <td><label for="ecname">Contact Name:</label></td>
+                    <td><input type="text" id="ecname" name="ecname"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="ecrelation">Relationship:</label></td>
+                    <td><input type="text" id="ecrelation" name="ecrelation"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="ecphone">Contact Phone:</label></td>
+                    <td><input type="tel" id="ecphone" name="ecphone"></td>
+                </tr>
+            </table>
+            </center>
+        </fieldset>
+
+        <br>
+
+        <center>
+            <input type="checkbox" id="agree" name="agree" required>
+            <label for="agree">I agree to follow the volunteer guidelines.</label>
+            <br><br>
+            <button type="submit">Register</button>
+            <button type="reset">Clear</button>
+        </center>
+    </form>
+
+</body>
+</html>

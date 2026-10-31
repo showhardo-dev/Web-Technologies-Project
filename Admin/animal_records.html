@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manage Animal Records</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="page-container">
+        <header class="page-header">
+            <div class="logo">
+                <img src="logo.png" alt="Animal Shelter Logo">
+            </div>
+            <div class="header-text">
+                <h1>Animal Shelter Management System</h1>
+                <p>Care • Protect • Give Them a Better Tomorrow</p>
+            </div>
+            <div class="paw-decoration">🐾</div>
+        </header>
+ 
+        <nav class="main-nav">
+            <a href="manage_user.html">Manage Users</a>
+            <a href="animal_records.html" class="active">Animal Records</a>
+            <a href="view_reports.html">View Reports</a>
+        </nav>
+ 
+        <main class="content-container" id="admin-content">
+            <h2>Manage Animal Records</h2>
+ 
+            <section class="section-box">
+                <h3>Add / Edit Animal Record</h3>
+                <form>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="animalid">Animal ID:</label>
+                            <input type="text" id="animalid" name="animalid">
+                        </div>
+                        <div class="form-group">
+                            <label for="age">Age:</label>
+                            <input type="number" id="age" name="age" min="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="animalname">Name:</label>
+                            <input type="text" id="animalname" name="animalname">
+                        </div>
+                        <div class="form-group">
+                            <label for="rescue-date">Date Arrived:</label>
+                            <input type="date" id="rescue-date" name="rescue_date">
+                        </div>
+                        <div class="form-group">
+                            <label for="species">Species:</label>
+                            <select id="species" name="species">
+                                <option value="">Select Species</option>
+                                <option>Dog</option><option>Cat</option><option>Bird</option><option>Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="health">Health Status:</label>
+                            <select id="health" name="health">
+                                <option value="">Select Health Status</option>
+                                <option>Healthy</option><option>Needs Care</option><option>Under Treatment</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="breed">Breed:</label>
+                            <input type="text" id="breed" name="breed">
+                        </div>
+                        <div class="form-group">
+                            <label for="adoption">Adoption Status:</label>
+                            <select id="adoption" name="adoption">
+                                <option>Available</option><option>Adopted</option><option>Not Available</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Gender:</label>
+                            <div class="option-group">
+                                <label><input type="radio" name="gender" value="Male"> Male</label>
+                                <label><input type="radio" name="gender" value="Female"> Female</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description:</label>
+                            <textarea id="description" name="description" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-buttons">
+                        <input type="submit" value="Save Record" class="primary-btn">
+                        <input type="reset" value="Reset" class="secondary-btn">
+                    </div>
+                </form>
+            </section>
+ 
+            <section class="section-box">
+                <h3>Animal Records List</h3>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Animal ID</th><th>Name</th><th>Species</th><th>Breed</th>
+                                <th>Gender</th><th>Age</th><th>Date Arrived</th><th>Health Status</th><th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                       
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+        <footer class="page-footer">Animal Shelter Management System — Admin Panel</footer>
+    </div>
+</body>
+</html>
+ 
+ 

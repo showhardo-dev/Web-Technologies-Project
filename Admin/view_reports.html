@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Reports</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="page-container">
+        <header class="page-header">
+            <div class="logo">
+                <img src="logo.png" alt="Animal Shelter Logo">
+            </div>
+            <div class="header-text">
+                <h1>Animal Shelter Management System</h1>
+                <p>Care • Protect • Give Them a Better Tomorrow</p>
+            </div>
+            <div class="paw-decoration">🐾</div>
+        </header>
+ 
+        <nav class="main-nav">
+            <a href="manage_user.html">Manage Users</a>
+            <a href="animal_records.html">Animal Records</a>
+            <a href="view_reports.html" class="active">View Reports</a>
+        </nav>
+ 
+        <main class="content-container" id="admin-content">
+            <h2>View Reports</h2>
+ 
+            <section class="section-box">
+                <h3>Report Filters</h3>
+                <form>
+                    <div class="report-filters">
+                        <div class="form-group">
+                            <label for="report-type">Report Type:</label>
+                            <select id="report-type" name="report_type">
+                                <option>Animal Report</option>
+                                <option>User Report</option>
+                                <option>Adoption Report</option>
+                                <option>Health Report</option>
+                                <option>Donation Report</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="start-date">From Date:</label>
+                            <input type="date" id="start-date" name="start_date">
+                        </div>
+                        <div class="form-group">
+                            <label for="end-date">To Date:</label>
+                            <input type="date" id="end-date" name="end_date">
+                        </div>
+                        <div class="form-group">
+                            <label for="report-status">Status:</label>
+                            <select id="report-status" name="status">
+                                <option>All</option><option>Available</option><option>Adopted</option><option>Under Treatment</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-buttons">
+                        <input type="submit" value="Generate Report" class="primary-btn">
+                        <input type="reset" value="Clear" class="secondary-btn">
+                    </div>
+                </form>
+            </section>
+ 
+            <section class="summary-grid">
+                <div class="summary-card blue-card"><span>Total Animals</span><strong>25</strong></div>
+                <div class="summary-card green-card"><span>Adopted</span><strong>12</strong></div>
+                <div class="summary-card orange-card"><span>Under Treatment</span><strong>5</strong></div>
+                <div class="summary-card red-card"><span>Not Adopted</span><strong>8</strong></div>
+            </section>
+ 
+            <section class="section-box">
+                <h3>Report Results</h3>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr><th>Report ID</th><th>Report Type</th><th>Total Count</th><th>Generated On</th><th>Actions</th></tr>
+                        </thead>
+                        <tbody>
+                       
+                    </table>
+                </div>
+            </section>
+        </main>
+        <footer class="page-footer">Animal Shelter Management System — Admin Panel</footer>
+    </div>
+</body>
+</html>
+ 
+ 
