@@ -14,7 +14,7 @@
         <a href="index.html">Go to Home</a>
     </center>
 
-    <form>
+    <form id="regForm" novalidate>
         <fieldset>
             <legend align="center">Personal Information</legend>
 
@@ -22,12 +22,18 @@
              <table>
                 <tr>
                     <td><label for="fullname">Full Name:</label></td>
-                    <td><input type="text" id="fullname" name="fullname" required></td>
+                    <td>
+                        <input type="text" id="fullname" name="fullname">
+                        <span class="error-msg" id="fullname_error"></span>
+                    </td>
                 </tr>
 
                 <tr>
-                    <td><label >Date of Birth:</label></td>
-                    <td><input type="date" id="dob" name="dob"  required></td>
+                    <td><label for="dob">Date of Birth:</label></td>
+                    <td>
+                        <input type="date" id="dob" name="dob">
+                        <span class="error-msg" id="dob_error"></span>
+                    </td>
                 </tr>
 
                 <tr>
@@ -39,22 +45,48 @@
                         <label for="female">Female</label>
                         <input type="radio" id="other" name="gender" value="other">
                         <label for="other">Other</label>
+                        <span class="error-msg" id="gender_error"></span>
                     </td>
                 </tr>
 
                 <tr>
                     <td><label for="email">Email:</label></td>
-                    <td><input type="email" id="email" name="email" required></td>
+                    <td>
+                        <input type="email" id="email" name="email">
+                        <span class="error-msg" id="email_error"></span>
+                    </td>
                 </tr>
 
                 <tr>
                     <td><label for="phone">Phone Number:</label></td>
-                    <td><input type="tel" id="phone" name="phone" required></td>
+                    <td>
+                        <input type="tel" id="phone" name="phone" placeholder="017XXXXXXXX">
+                        <span class="error-msg" id="phone_error"></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="password">Password:</label></td>
+                    <td>
+                        <input type="password" id="password" name="password">
+                        <span class="error-msg" id="password_error"></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="confirmpassword">Confirm Password:</label></td>
+                    <td>
+                        <input type="password" id="confirmpassword" name="confirmpassword">
+                        <span class="error-msg" id="confirmpassword_error"></span>
+                    </td>
                 </tr>
 
                 <tr>
                     <td><label for="address">Address:</label></td>
-                    <td><textarea id="address" name="address" ></textarea></td>
+                    <td>
+                        <textarea id="address" name="address"></textarea>
+                        <span class="error-msg" id="address_error"></span>
+                    </td>
                 </tr>
             </table>
            </center>
@@ -97,6 +129,7 @@
                         <label for="thu">Thu</label>
                         <input type="checkbox" id="fri" name="days" value="fri">
                         <label for="fri">Fri</label>
+                        <span class="error-msg" id="days_error"></span>
                     </td>
                 </tr>
 
@@ -114,7 +147,10 @@
 
                 <tr>
                     <td><label for="startdate">Available From:</label></td>
-                    <td><input type="date" id="startdate" name="startdate"></td>
+                    <td>
+                        <input type="date" id="startdate" name="startdate">
+                        <span class="error-msg" id="startdate_error"></span>
+                    </td>
                 </tr>
 
                 <tr>
@@ -133,17 +169,26 @@
                 <table>
                 <tr>
                     <td><label for="ecname">Contact Name:</label></td>
-                    <td><input type="text" id="ecname" name="ecname"></td>
+                    <td>
+                        <input type="text" id="ecname" name="ecname">
+                        <span class="error-msg" id="ecname_error"></span>
+                    </td>
                 </tr>
 
                 <tr>
                     <td><label for="ecrelation">Relationship:</label></td>
-                    <td><input type="text" id="ecrelation" name="ecrelation"></td>
+                    <td>
+                        <input type="text" id="ecrelation" name="ecrelation">
+                        <span class="error-msg" id="ecrelation_error"></span>
+                    </td>
                 </tr>
 
                 <tr>
                     <td><label for="ecphone">Contact Phone:</label></td>
-                    <td><input type="tel" id="ecphone" name="ecphone"></td>
+                    <td>
+                        <input type="tel" id="ecphone" name="ecphone" placeholder="017XXXXXXXX">
+                        <span class="error-msg" id="ecphone_error"></span>
+                    </td>
                 </tr>
             </table>
             </center>
@@ -152,13 +197,17 @@
         <br>
 
         <center>
-            <input type="checkbox" id="agree" name="agree" required>
+            <input type="checkbox" id="agree" name="agree">
             <label for="agree">I agree to follow the volunteer guidelines.</label>
+            <br>
+            <span class="error-msg" id="agree_error"></span>
             <br><br>
             <button type="submit">Register</button>
-            <button type="reset">Clear</button>
+            <button type="reset" id="clearBtn">Clear</button>
+            <div id="form_message"></div>
         </center>
     </form>
 
+    <script src="js/volunteer_reg.js"></script>
 </body>
 </html>
