@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Volunteer Registration</title>
+    <link rel="stylesheet" href="css/volunteer_reg.css">
+</head>
+<body>
+
+    <h1 align="center">Volunteer Registration</h1>
+    <h3 align="center">Join Our Rescue and Animal Care Team</h3>
+
+    <center>
+        <a href="index.html">Go to Home</a>
+    </center>
+
+    <form id="regForm" novalidate>
+        <fieldset>
+            <legend align="center">Personal Information</legend>
+
+           <center>
+             <table>
+                <tr>
+                    <td><label for="fullname">Full Name:</label></td>
+                    <td>
+                        <input type="text" id="fullname" name="fullname">
+                        <span class="error-msg" id="fullname_error"></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="dob">Date of Birth:</label></td>
+                    <td>
+                        <input type="date" id="dob" name="dob">
+                        <span class="error-msg" id="dob_error"></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label>Gender:</label></td>
+                    <td>
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label>
+                        <input type="radio" id="other" name="gender" value="other">
+                        <label for="other">Other</label>
+                        <span class="error-msg" id="gender_error"></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td>
+                        <input type="email" id="email" name="email">
+                        <span class="error-msg" id="email_error"></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="phone">Phone Number:</label></td>
+                    <td>
+                        <input type="tel" id="phone" name="phone" placeholder="017XXXXXXXX">
+                        <span class="error-msg" id="phone_error"></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="password">Password:</label></td>
+                    <td>
+                        <input type="password" id="password" name="password">
+                        <span class="error-msg" id="password_error"></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="confirmpassword">Confirm Password:</label></td>
+                    <td>
+                        <input type="password" id="confirmpassword" name="confirmpassword">
+                        <span class="error-msg" id="confirmpassword_error"></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="address">Address:</label></td>
+                    <td>
+                        <textarea id="address" name="address"></textarea>
+                        <span class="error-msg" id="address_error"></span>
+                    </td>
+                </tr>
+            </table>
+           </center>
+
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend align="center">Volunteer Preferences</legend>
+           <center>
+             <table>
+                <tr>
+                    <td><label for="area">Area of Interest:</label></td>
+                    <td>
+                        <select id="area" name="area">
+                            <option>Rescue Operations</option>
+                            <option>Animal Care</option>
+                            <option>Event Support</option>
+                            <option>Fundraising</option>
+                            <option>Administration</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label>Days Available:</label></td>
+                    <td>
+                        <input type="checkbox" id="sat" name="days" value="sat">
+                        <label for="sat">Sat</label>
+                        <input type="checkbox" id="sun" name="days" value="sun">
+                        <label for="sun">Sun</label>
+                        <input type="checkbox" id="mon" name="days" value="mon">
+                        <label for="mon">Mon</label>
+                        <input type="checkbox" id="tue" name="days" value="tue">
+                        <label for="tue">Tue</label>
+                        <input type="checkbox" id="wed" name="days" value="wed">
+                        <label for="wed">Wed</label>
+                        <input type="checkbox" id="thu" name="days" value="thu">
+                        <label for="thu">Thu</label>
+                        <input type="checkbox" id="fri" name="days" value="fri">
+                        <label for="fri">Fri</label>
+                        <span class="error-msg" id="days_error"></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="shift">Preferred Time:</label></td>
+                    <td>
+                        <select id="shift" name="shift">
+                            <option>Morning</option>
+                            <option>Afternoon</option>
+                            <option>Evening</option>
+                            <option>Flexible</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="startdate">Available From:</label></td>
+                    <td>
+                        <input type="date" id="startdate" name="startdate">
+                        <span class="error-msg" id="startdate_error"></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="experience">Experience / Skills:</label></td>
+                    <td><textarea id="experience" name="experience" rows="4" cols="30"></textarea></td>
+                </tr>
+            </table>
+           </center>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend align="center">Emergency Contact</legend>
+            <center>
+                <table>
+                <tr>
+                    <td><label for="ecname">Contact Name:</label></td>
+                    <td>
+                        <input type="text" id="ecname" name="ecname">
+                        <span class="error-msg" id="ecname_error"></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="ecrelation">Relationship:</label></td>
+                    <td>
+                        <input type="text" id="ecrelation" name="ecrelation">
+                        <span class="error-msg" id="ecrelation_error"></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="ecphone">Contact Phone:</label></td>
+                    <td>
+                        <input type="tel" id="ecphone" name="ecphone" placeholder="017XXXXXXXX">
+                        <span class="error-msg" id="ecphone_error"></span>
+                    </td>
+                </tr>
+            </table>
+            </center>
+        </fieldset>
+
+        <br>
+
+        <center>
+            <input type="checkbox" id="agree" name="agree">
+            <label for="agree">I agree to follow the volunteer guidelines.</label>
+            <br>
+            <span class="error-msg" id="agree_error"></span>
+            <br><br>
+            <button type="submit">Register</button>
+            <button type="reset" id="clearBtn">Clear</button>
+            <div id="form_message"></div>
+        </center>
+    </form>
+
+    <script src="js/volunteer_reg.js"></script>
+</body>
+</html>

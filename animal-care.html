@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animal Care Records</title>
+    <link rel="stylesheet" href="css/care.css">
+</head>
+<body >
+
+    <h1 align="center">Animal Care Management</h1>
+    <h3 align="center"> Care Records and Behavior Logs</h3>
+
+    <form>
+       <center>
+         <fieldset>
+            <legend align="center">Animal Information</legend>
+            <table >
+                <tr>
+                    <td><label>Animal ID:</label></td>
+                    <td><input type="text" ></td>
+                </tr>
+
+                <tr>
+                    <td><label >Animal Name:</label></td>
+                    <td><input type="text" ></td>
+                </tr>
+
+                <tr>
+                    <td><label >Animal Type:</label></td>
+                    <td>
+                        <select >
+                            <option>Dog</option>
+                            <option>Cat</option>
+                            <option>Bird</option>
+                            <option>Other</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+       </center>
+
+        <br>
+
+        <center>
+            <fieldset>
+            <legend align="center">Animal Care Record</legend>
+            <table >
+                <tr>
+                    <td><label >Care Date:</label></td>
+                    <td><input type="date"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="food">Food Provided:</label></td>
+                    <td><input type="text"></td>
+                </tr>
+
+                <tr>
+                    <td><label >Health Condition:</label></td>
+                    <td>
+                        <select >
+                            <option>Healthy</option>
+                            <option>Sick</option>
+                            <option>Injured</option>
+                            <option>Under Treatment</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label >Care Notes:</label></td>
+                    <td><textarea ></textarea></td>
+                </tr>
+            </table>
+        </fieldset>
+        </center>
+
+        <br>
+
+        <center>
+            <fieldset>
+            <legend align="center">Temperament Log</legend>
+            <table>
+                <tr>
+                    <td><label >Animal Behavior:</label></td>
+                    <td>
+                        <select >
+                            <option>Friendly</option>
+                            <option>Calm</option>
+                            <option>Playful</option>
+                            <option>Fearful</option>
+                            <option>Aggressive</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label>Behavior Details:</label></td>
+                    <td><textarea></textarea></td>
+                </tr>
+            </table>
+        </fieldset>
+
+        </center>
+        <br>
+
+        <center><button type="submit">Save Care Record</button></center>
+    </form>
+
+</body>
+</html>
