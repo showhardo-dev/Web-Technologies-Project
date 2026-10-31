@@ -8,7 +8,7 @@
 
 <body>
 
-    <div class="page-container">
+    <div class="page-container wide-page">
 
         <header class="page-header">
             <h1>Animal Shelter Management System</h1>
@@ -21,191 +21,264 @@
             <a href="donation.html" class="active">Donation</a>
         </nav>
 
-        <main class="registration-container">
 
-            <form id="donation-form">
+        <section class="donation-hero">
 
-                <fieldset class="form-section">
+            <h2>Make a Difference Today</h2>
 
-                    <legend>Donor Information</legend>
+            <p>
+                Your donation can help provide food, medicine,
+                shelter and daily care for animals in need.
+            </p>
 
-                    <div class="form-group">
-
-                        <label for="donor_name">
-                            Full Name:
-                        </label>
-
-                        <input
-                            type="text"
-                            id="donor_name"
-                            name="full_name"
-                            required>
-
-                    </div>
+        </section>
 
 
-                    <div class="form-group">
-
-                        <label for="donor_email">
-                            Email:
-                        </label>
-
-                        <input
-                            type="email"
-                            id="donor_email"
-                            name="email"
-                            required>
-
-                    </div>
+        <main class="donation-layout">
 
 
-                    <div class="form-group">
+            <aside class="donation-info">
 
-                        <label for="donor_phone">
-                            Phone Number:
-                        </label>
+                <h2>Why Donate?</h2>
 
-                        <input
-                            type="tel"
-                            id="donor_phone"
-                            name="phone"
-                            required>
+                <div class="donation-info-card">
+                    <h3>Food & Care</h3>
+                    <p>
+                        Help provide healthy food and daily care
+                        for rescued animals.
+                    </p>
+                </div>
 
-                    </div>
+                <div class="donation-info-card">
+                    <h3>Medical Support</h3>
+                    <p>
+                        Donations help cover medicines,
+                        treatments and health checkups.
+                    </p>
+                </div>
 
-                </fieldset>
+                <div class="donation-info-card">
+                    <h3>Shelter Support</h3>
+                    <p>
+                        Help us maintain a safe and comfortable
+                        shelter for animals.
+                    </p>
+                </div>
 
-
-                <fieldset class="form-section">
-
-                    <legend>Donation Information</legend>
-
-                    <div class="form-group">
-
-                        <label for="donation_type">
-                            Donation Type:
-                        </label>
-
-                        <select
-                            id="donation_type"
-                            name="donation_type"
-                            required>
-
-                            <option value="">
-                                Select Donation Type
-                            </option>
-
-                            <option value="Money">
-                                Money
-                            </option>
-
-                            <option value="Food">
-                                Food
-                            </option>
-
-                            <option value="Medicine">
-                                Medicine
-                            </option>
-
-                            <option value="Animal Supplies">
-                                Animal Supplies
-                            </option>
-
-                        </select>
-
-                    </div>
+            </aside>
 
 
-                    <div class="form-group">
+            <section class="donation-form-container">
 
-                        <label for="amount_quantity">
-                            Amount / Quantity:
-                        </label>
+                <h2>Donation Form</h2>
 
-                        <input
-                            type="text"
-                            id="amount_quantity"
-                            name="amount_quantity"
-                            required>
-
-                    </div>
+                <form method="get"
+                      action="donation_submit.html"
+                      onsubmit="return donationVal()"
+                      novalidate>
 
 
-                    <div class="form-group">
+                    <fieldset class="form-section">
 
-                        <label>
-                            Payment Method:
-                        </label>
+                        <legend>Donor Information</legend>
 
-                        <div class="option-group">
 
-                            <label>
-                                <input
-                                    type="radio"
-                                    name="payment_method"
-                                    value="Cash"
-                                    required>
-                                Cash
+                        <div class="form-group">
+
+                            <label for="donor_name">
+                                Full Name:
                             </label>
 
-                            <label>
-                                <input
-                                    type="radio"
-                                    name="payment_method"
-                                    value="bKash">
-                                bKash
-                            </label>
+                            <input
+                                type="text"
+                                id="donor_name"
+                                name="donor_name"
+                                onkeyup="donorNameCheck()">
 
-                            <label>
-                                <input
-                                    type="radio"
-                                    name="payment_method"
-                                    value="Bank">
-                                Bank
-                            </label>
+                            <p id="donornameerror"
+                               class="error-message"></p>
 
                         </div>
 
+
+                        <div class="form-group">
+
+                            <label for="donor_email">
+                                Email:
+                            </label>
+
+                            <input
+                                type="email"
+                                id="donor_email"
+                                name="donor_email"
+                                onkeyup="donorEmailCheck()">
+
+                            <p id="donoremailerror"
+                               class="error-message"></p>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="donor_phone">
+                                Phone Number:
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="donor_phone"
+                                name="donor_phone"
+                                onkeyup="donorPhoneCheck()">
+
+                            <p id="donorphoneerror"
+                               class="error-message"></p>
+
+                        </div>
+
+                    </fieldset>
+
+
+                    <fieldset class="form-section">
+
+                        <legend>Donation Information</legend>
+
+
+                        <div class="form-group">
+
+                            <label for="donation_type">
+                                Donation Type:
+                            </label>
+
+                            <select
+                                id="donation_type"
+                                name="donation_type"
+                                onchange="donationTypeCheck()">
+
+                                <option value="">
+                                    Select Donation Type
+                                </option>
+
+                                <option value="Money">
+                                    Money
+                                </option>
+
+                                <option value="Food">
+                                    Food
+                                </option>
+
+                                <option value="Medicine">
+                                    Medicine
+                                </option>
+
+                                <option value="Animal Supplies">
+                                    Animal Supplies
+                                </option>
+
+                            </select>
+
+                            <p id="donationtypeerror"
+                               class="error-message"></p>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="amount_quantity">
+                                Amount / Quantity:
+                            </label>
+
+                            <input
+                                type="text"
+                                id="amount_quantity"
+                                name="amount_quantity"
+                                onkeyup="amountCheck()">
+
+                            <p id="amounterror"
+                               class="error-message"></p>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>Payment Method:</label>
+
+                            <div class="option-group">
+
+                                <label>
+                                    <input
+                                        type="radio"
+                                        name="payment_method"
+                                        value="Cash"
+                                        onchange="paymentCheck()">
+                                    Cash
+                                </label>
+
+                                <label>
+                                    <input
+                                        type="radio"
+                                        name="payment_method"
+                                        value="bKash"
+                                        onchange="paymentCheck()">
+                                    bKash
+                                </label>
+
+                                <label>
+                                    <input
+                                        type="radio"
+                                        name="payment_method"
+                                        value="Bank"
+                                        onchange="paymentCheck()">
+                                    Bank
+                                </label>
+
+                            </div>
+
+                            <p id="paymenterror"
+                               class="error-message"></p>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="description">
+                                Description:
+                            </label>
+
+                            <textarea
+                                id="description"
+                                name="description"
+                                rows="4"
+                                onkeyup="descriptionCheck()"></textarea>
+
+                            <p id="descriptionerror"
+                               class="error-message"></p>
+
+                        </div>
+
+                    </fieldset>
+
+
+                    <div class="form-buttons">
+
+                        <input
+                            type="submit"
+                            value="Submit Donation"
+                            class="btn primary-btn">
+
+                        <input
+                            type="reset"
+                            value="Reset"
+                            class="btn secondary-btn">
+
                     </div>
 
+                </form>
 
-                    <div class="form-group">
-
-                        <label for="description">
-                            Description:
-                        </label>
-
-                        <textarea
-                            id="description"
-                            name="description"
-                            rows="4"></textarea>
-
-                    </div>
-
-                </fieldset>
-
-
-                <div class="form-buttons">
-
-                    <input
-                        type="submit"
-                        value="Submit Donation"
-                        class="btn primary-btn">
-
-                    <input
-                        type="reset"
-                        value="Reset"
-                        class="btn secondary-btn">
-
-                </div>
-
-            </form>
-
-            <div class="back-link">
-                <a href="available_animals.html">
-                    Back to Available Animals
-                </a>
-            </div>
+            </section>
 
         </main>
 
@@ -215,6 +288,9 @@
         </footer>
 
     </div>
+
+
+    <script src="js/public_user.js"></script>
 
 </body>
 

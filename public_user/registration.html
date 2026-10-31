@@ -17,7 +17,10 @@
 
         <main class="registration-container">
 
-            <form id="registration-form">
+            <form method="get"
+                  action="submit.html"
+                  onsubmit="return myVal()"
+                  novalidate>
 
                 <fieldset class="form-section">
 
@@ -30,8 +33,11 @@
                             type="text"
                             id="full_name"
                             name="full_name"
-                            required>
+                            onkeyup="nameCheck()">
+
+                        <p id="nameerror" class="error-message"></p>
                     </div>
+
 
                     <div class="form-group">
                         <label for="email">Email:</label>
@@ -40,8 +46,11 @@
                             type="email"
                             id="email"
                             name="email"
-                            required>
+                            onkeyup="emailCheck()">
+
+                        <p id="emailerror" class="error-message"></p>
                     </div>
+
 
                     <div class="form-group">
                         <label for="password">Password:</label>
@@ -50,8 +59,26 @@
                             type="password"
                             id="password"
                             name="password"
-                            required>
+                            onkeyup="passwordCheck()">
+
+                        <p id="passworderror" class="error-message"></p>
                     </div>
+
+
+                    <div class="form-group">
+                        <label for="confirm_password">
+                            Confirm Password:
+                        </label>
+
+                        <input
+                            type="password"
+                            id="confirm_password"
+                            name="confirm_password"
+                            onkeyup="confirmPasswordCheck()">
+
+                        <p id="confirmerror" class="error-message"></p>
+                    </div>
+
 
                     <div class="form-group">
                         <label for="phone">Phone Number:</label>
@@ -60,8 +87,11 @@
                             type="tel"
                             id="phone"
                             name="phone"
-                            required>
+                            onkeyup="phoneCheck()">
+
+                        <p id="phoneerror" class="error-message"></p>
                     </div>
+
 
                     <div class="form-group">
                         <label for="address">Address:</label>
@@ -69,8 +99,7 @@
                         <textarea
                             id="address"
                             name="address"
-                            rows="3"
-                            required></textarea>
+                            rows="3"></textarea>
                     </div>
 
                 </fieldset>
@@ -80,8 +109,8 @@
 
                     <legend>Public User Information</legend>
 
-                    <div class="form-group">
 
+                    <div class="form-group">
                         <label>User Type:</label>
 
                         <div class="option-group">
@@ -91,7 +120,7 @@
                                     type="radio"
                                     name="user_type"
                                     value="Donor"
-                                    required>
+                                    onchange="userTypeCheck()">
                                 Donor
                             </label>
 
@@ -99,7 +128,8 @@
                                 <input
                                     type="radio"
                                     name="user_type"
-                                    value="Adopter">
+                                    value="Adopter"
+                                    onchange="userTypeCheck()">
                                 Adopter
                             </label>
 
@@ -107,17 +137,18 @@
                                 <input
                                     type="radio"
                                     name="user_type"
-                                    value="Both">
+                                    value="Both"
+                                    onchange="userTypeCheck()">
                                 Both
                             </label>
 
                         </div>
 
+                        <p id="usertypeerror" class="error-message"></p>
                     </div>
 
 
                     <div class="form-group">
-
                         <label for="preferred_animal">
                             Preferred Animal Type:
                         </label>
@@ -125,12 +156,9 @@
                         <select
                             id="preferred_animal"
                             name="preferred_animal"
-                            required>
+                            onchange="animalCheck()">
 
-                            <option value="">
-                                Select Animal Type
-                            </option>
-
+                            <option value="">Select Animal Type</option>
                             <option value="Dog">Dog</option>
                             <option value="Cat">Cat</option>
                             <option value="Bird">Bird</option>
@@ -138,11 +166,11 @@
 
                         </select>
 
+                        <p id="animalerror" class="error-message"></p>
                     </div>
 
 
                     <div class="form-group">
-
                         <label>Previous Pet Experience:</label>
 
                         <div class="option-group">
@@ -152,7 +180,7 @@
                                     type="radio"
                                     name="pet_experience"
                                     value="Yes"
-                                    required>
+                                    onchange="experienceCheck()">
                                 Yes
                             </label>
 
@@ -160,17 +188,18 @@
                                 <input
                                     type="radio"
                                     name="pet_experience"
-                                    value="No">
+                                    value="No"
+                                    onchange="experienceCheck()">
                                 No
                             </label>
 
                         </div>
 
+                        <p id="experienceerror" class="error-message"></p>
                     </div>
 
 
                     <div class="form-group">
-
                         <label for="housing_type">
                             Housing Type:
                         </label>
@@ -178,31 +207,20 @@
                         <select
                             id="housing_type"
                             name="housing_type"
-                            required>
+                            onchange="housingCheck()">
 
-                            <option value="">
-                                Select Housing Type
-                            </option>
-
-                            <option value="House">
-                                House
-                            </option>
-
-                            <option value="Apartment">
-                                Apartment
-                            </option>
-
-                            <option value="Other">
-                                Other
-                            </option>
+                            <option value="">Select Housing Type</option>
+                            <option value="House">House</option>
+                            <option value="Apartment">Apartment</option>
+                            <option value="Other">Other</option>
 
                         </select>
 
+                        <p id="housingerror" class="error-message"></p>
                     </div>
 
 
                     <div class="form-group">
-
                         <label>Donation Interest:</label>
 
                         <div class="option-group">
@@ -210,13 +228,16 @@
                             <label>
                                 <input
                                     type="checkbox"
-                                    name="donation_interest">
+                                    id="donation_interest"
+                                    name="donation_interest"
+                                    onchange="donationCheck()">
 
                                 Interested in Donation
                             </label>
 
                         </div>
 
+                        <p id="donationerror" class="error-message"></p>
                     </div>
 
                 </fieldset>
@@ -236,16 +257,19 @@
 
                 </div>
 
+                <p id="successMessage"></p>
+
             </form>
 
         </main>
-
 
         <footer class="page-footer">
             <p>Animal Shelter Management System</p>
         </footer>
 
     </div>
+
+    <script src="js/public_user.js"></script>
 
 </body>
 

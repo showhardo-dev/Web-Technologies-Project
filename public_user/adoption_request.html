@@ -21,32 +21,47 @@
             <a href="donation.html">Donation</a>
         </nav>
 
+
         <main class="registration-container">
 
-            <form id="adoption-form">
+            <form method="get"
+                  action="adoption_submit.html"
+                  onsubmit="return adoptionVal()"
+                  novalidate>
+
 
                 <fieldset class="form-section">
 
                     <legend>Animal Information</legend>
 
+
                     <div class="form-group">
+
                         <label for="animal_id">Animal ID:</label>
 
                         <input
                             type="text"
                             id="animal_id"
                             name="animal_id"
-                            required>
+                            onkeyup="animalIdCheck()">
+
+                        <p id="animaliderror" class="error-message"></p>
+
                     </div>
 
+
                     <div class="form-group">
+
                         <label for="animal_name">Animal Name:</label>
 
                         <input
                             type="text"
                             id="animal_name"
                             name="animal_name"
-                            required>
+                            onkeyup="animalNameCheck()">
+
+                        <p id="animalnameerror" class="error-message"></p>
+
                     </div>
 
                 </fieldset>
@@ -56,45 +71,66 @@
 
                     <legend>Applicant Information</legend>
 
+
                     <div class="form-group">
+
                         <label for="adopter_name">Full Name:</label>
 
                         <input
                             type="text"
                             id="adopter_name"
-                            name="full_name"
-                            required>
+                            name="adopter_name"
+                            onkeyup="adopterNameCheck()">
+
+                        <p id="adopternameerror" class="error-message"></p>
+
                     </div>
 
+
                     <div class="form-group">
+
                         <label for="adopter_email">Email:</label>
 
                         <input
                             type="email"
                             id="adopter_email"
-                            name="email"
-                            required>
+                            name="adopter_email"
+                            onkeyup="adopterEmailCheck()">
+
+                        <p id="adopteremailerror" class="error-message"></p>
+
                     </div>
 
+
                     <div class="form-group">
+
                         <label for="adopter_phone">Phone Number:</label>
 
                         <input
                             type="tel"
                             id="adopter_phone"
-                            name="phone"
-                            required>
+                            name="adopter_phone"
+                            onkeyup="adopterPhoneCheck()">
+
+                        <p id="adopterphoneerror" class="error-message"></p>
+
                     </div>
 
+
                     <div class="form-group">
+
                         <label for="adopter_address">Address:</label>
 
                         <textarea
                             id="adopter_address"
-                            name="address"
+                            name="adopter_address"
                             rows="3"
-                            required></textarea>
+                            onkeyup="addressCheck()"></textarea>
+
+                        <p id="addresserror" class="error-message"></p>
+
                     </div>
+
 
                     <div class="form-group">
 
@@ -105,25 +141,16 @@
                         <select
                             id="adoption_housing"
                             name="housing_type"
-                            required>
+                            onchange="adoptionHousingCheck()">
 
-                            <option value="">
-                                Select Housing Type
-                            </option>
-
-                            <option value="House">
-                                House
-                            </option>
-
-                            <option value="Apartment">
-                                Apartment
-                            </option>
-
-                            <option value="Other">
-                                Other
-                            </option>
+                            <option value="">Select Housing Type</option>
+                            <option value="House">House</option>
+                            <option value="Apartment">Apartment</option>
+                            <option value="Other">Other</option>
 
                         </select>
+
+                        <p id="adoptionhousingerror" class="error-message"></p>
 
                     </div>
 
@@ -137,21 +164,25 @@
                             <label>
                                 <input
                                     type="radio"
-                                    name="pet_experience"
+                                    name="adoption_pet_experience"
                                     value="Yes"
-                                    required>
+                                    onchange="adoptionExperienceCheck()">
                                 Yes
                             </label>
 
                             <label>
                                 <input
                                     type="radio"
-                                    name="pet_experience"
-                                    value="No">
+                                    name="adoption_pet_experience"
+                                    value="No"
+                                    onchange="adoptionExperienceCheck()">
                                 No
                             </label>
 
                         </div>
+
+                        <p id="adoptionexperienceerror"
+                           class="error-message"></p>
 
                     </div>
 
@@ -166,7 +197,10 @@
                             id="adoption_reason"
                             name="adoption_reason"
                             rows="4"
-                            required></textarea>
+                            onkeyup="adoptionReasonCheck()"></textarea>
+
+                        <p id="adoptionreasonerror"
+                           class="error-message"></p>
 
                     </div>
 
@@ -187,7 +221,10 @@
 
                 </div>
 
+                <p id="adoptionSuccessMessage"></p>
+
             </form>
+
 
             <div class="back-link">
                 <a href="available_animals.html">
@@ -203,6 +240,9 @@
         </footer>
 
     </div>
+
+
+    <script src="js/public_user.js"></script>
 
 </body>
 
