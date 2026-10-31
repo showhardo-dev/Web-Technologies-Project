@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rescue Operations</title>
+     <link rel="stylesheet" href="css/rescue.css">
+</head>
+<body  >
+
+    <h1 align="center">Rescue Dashboard</h1>
+    <h3 align="center">Rescue Requests and Schedules</h3>
+
+    <form>
+       <center>
+         <fieldset>
+            <legend align="center">Reporter Information</legend>
+            <table >
+                <tr>
+                    <td><label>Reporter Name:</label></td>
+                    <td><input type="text"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="id">Reporter ID:</label></td>
+                    <td><input type="text"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="phone">Contact Number:</label></td>
+                    <td><input type="tel"></td>
+                </tr>
+            </table>
+        </fieldset>
+       </center>
+
+        <br>
+
+        <center>
+            <fieldset>
+            <legend align="center">Rescue Details</legend>
+            <table>
+                <tr>
+                    <td><label >Rescue Type:</label></td>
+                    <td><input type="text" ></td>
+                </tr>
+
+                <tr>
+                    <td><label >Location:</label></td>
+                    <td><input type="text" ></td>
+                </tr>
+
+                <tr>
+                    <td><label >Rescue Date:</label></td>
+                    <td><input type="date" ></td>
+                </tr>
+
+                <tr>
+                    <td><label>Rescue Time:</label></td>
+                    <td><input type="time" ></td>
+                </tr>
+
+                <tr>
+                    <td><label >Rescue Status:</label></td>
+                    <td>
+                        <select>
+                            <option>Pending</option>
+                            <option>In Progress</option>
+                            <option>Completed</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+        </center>
+
+        <br>
+
+        <center><button type="submit">Save Rescue</button></center>
+    </form>
+
+</body>
+</html>

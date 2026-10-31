@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Reports</title>
+</head>
+<body>
+ 
+    <h2 align="center">Animal Shelter Management System</h2>
+    <h3 align="center">Admin - View Reports</h3>
+ 
+    <a href="manage_user.html">Manage Users</a> |
+    <a href="animal_records.html">Manage Animals</a> |
+    <a href="view_reports.html">View Reports</a>
+ 
+    <hr>
+ 
+    <h3 align="center">Generate Report</h3>
+ 
+    <form>
+        <fieldset>
+            <legend>Report Information</legend>
+ 
+            Report Type:
+            <select name="report_type">
+                <option>Animal Report</option>
+                <option>User Report</option>
+                <option>Adoption Report</option>
+                <option>Health Report</option>
+                <option>Donation Report</option>
+            </select>
+ 
+            <br><br>
+ 
+            Start Date:
+            <input type="date" name="start_date">
+ 
+            <br><br>
+ 
+            End Date:
+            <input type="date" name="end_date">
+ 
+            <br><br>
+ 
+            Report Status:
+            <select name="status">
+                <option>All</option>
+                <option>Available</option>
+                <option>Adopted</option>
+                <option>Under Treatment</option>
+            </select>
+ 
+            <br><br>
+ 
+            Description:
+            <textarea name="description" rows="4" cols="30"></textarea>
+ 
+            <br><br>
+ 
+            <input type="submit" value="Generate Report">
+            <input type="reset" value="Clear">
+ 
+        </fieldset>
+    </form>
+ 
+    <br>
+ 
+    <center>
+        <a href="index.html">Back to Dashboard</a>
+    </center>
+ 
+</body>
+</html>
